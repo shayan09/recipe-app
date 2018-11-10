@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {Link} from 'react-router-dom';
+
 const Recipes = props => (
     <div className="container">
         <div className="row">
@@ -16,7 +18,7 @@ const Recipes = props => (
                                 </h5>
                                 <p className="recipes__subtitle">Publisher: <span>{recipe.publisher}</span></p>
                             </div>
-                            <button className="recipe_buttons">View</button>
+                            <div className="align_button"><button className="recipe_buttons"><a href={recipe.publisher_url} target={"_blank"}>View Website</a></button></div>
                         </div>
                     </div>
                 );
